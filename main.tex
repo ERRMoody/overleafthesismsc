@@ -37,7 +37,7 @@
 
 % Header from Page Three on: Edit below for left and right headers
 \lhead{}
-\rhead{Wordy Manuscript Title}
+\rhead{Inferring the temperature at which the Last Universal Common Ancestor lived}
 
 %--------------------------------------------------------%
 %	BEGIN DOCUMENT
@@ -64,11 +64,11 @@
 
 % NOTE: Comment out the lines below to remove line numbers
   % Running line numbers:
-  \linenumbers
-  \setlength\linenumbersep{15pt}
-  \renewcommand\linenumberfont{\normalfont\footnotesize\sffamily\color{gray}}
+  %\linenumbers
+  %\setlength\linenumbersep{15pt}
+  %\renewcommand\linenumberfont{\normalfont\footnotesize\sffamily\color{gray}}
   %\pagewiselinenumbers % Same, but that reset on every page:
-  \modulolinenumbers[1] % Number only every line. Change for fewer.
+  %\modulolinenumbers[1] % Number only every line. Change for fewer.
 
 %--------------------------------------------------------%
 %	CONTENT
@@ -86,9 +86,10 @@
 % BIBTEX
 
     % NOTE: Comment out next two lines if using biblatex
-    \bibliographystyle{references/ajs}
+%     \bibliographystyle{pnas2009.bst}
+    \bibliographystyle{pnas-new-bare}
 	\bibliography{references/biblio} % Insert bibliography
-
+	
 % BIBLATEX
 
 	% NOTE: Uncomment next line to use biblatex
@@ -112,13 +113,13 @@
 % at the end, you can comment out the two lines below,
 % and embed figures in the text of content.tex instead of here
 
-\newpage
-\section*{Figures}
+%\newpage
+%\section*{Figures}
 
-\begin{figure}[ht!]
-\centering\includegraphics[width=0.4\linewidth]{figures/placeholder}
-\caption{Figure caption}
-\end{figure}
+%\begin{figure}[ht!]
+%\centering\includegraphics[width=0.4\linewidth]{figures/placeholder}
+%\caption{Figure caption}
+%\end{figure}
 
 %--------------------------------------------------------%
 %	TABLES
@@ -128,13 +129,13 @@
 % at the end, you can comment out the two lines below,
 % and embed tables in the text of content.tex instead of here
 
-\newpage
-\section*{Tables}
+%\newpage
+%\section*{Tables}
 
-\input{tables/sample_longtable}
+%\input{tables/sample_longtable}
 
-\newpage
-\input{tables/sample_table}
+%\newpage
+%\input{tables/sample_table}
 
 %--------------------------------------------------------%
 %	WORD COUNT
@@ -145,16 +146,18 @@
 
 % NOTE: AJS wants no more than about 10,000 words total.
 
-\newpage
+%\newpage
 
 %TC:ignore  %% This region is ignored for the word count
-\section*{Word Count}
+%\section*{Word Count}
 
-This document contains approximately {\large \textbf{\wordcount}} before this page, including: title, authors, section headings, abstract, body text, tables, figure captions and references. It seems to ignore most \LaTeX \ code and \%comments, but it treats contractions such as "can't" as one word.
+%This document contains approximately {\large \textbf{\wordcount}} before this page, including: title, authors, section headings, abstract, body text, tables, figure captions and references. It seems to ignore most \LaTeX \ code and \%comments, but it treats contractions such as "can't" as one word.
 %TC:endignore
 
 %--------------------------------------------------------%
 %	END DOCUMENT
 %--------------------------------------------------------%
+\newpage
+\printglossaries
 
 \end{document}

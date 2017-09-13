@@ -11,7 +11,9 @@
 % DOCUMENT CLASS
     % Change "letterpaper" to "a4" if you use a4 paper size
     \documentclass[letterpaper,12pt]{article}
-  
+  	\usepackage[nottoc,numbib]{tocbibind}
+    \usepackage[numberedsection]{glossaries}
+    \usepackage[numbers,sort&compress]{natbib}
 % TITLE SECTION
 	
  %Abstract
@@ -50,8 +52,8 @@
  
 % DRAFT WATERMARK
 	% NOTE: Comment out these two lines to remove watermark
-    \usepackage[firstpage]{draftwatermark} % adds draft watermark
-    \SetWatermarkLightness{0.85}
+    %\usepackage[firstpage]{draftwatermark} % adds draft watermark
+    %\SetWatermarkLightness{0.85}
 
 % MACROS
     % Define keywords macro command
@@ -83,7 +85,7 @@
 	% Spacing
 	\usepackage{setspace} % See \doublespacing command at the top of content.tex
     % Numbering
-    \usepackage{lineno,xcolor} 	% See \linenumbers at the top of content.tex
+    %\usepackage{lineno,xcolor} 	% See \linenumbers at the top of content.tex
 
 % MARGINS
 	%NOTE: All spaces in this template are in inches, because it is
@@ -131,7 +133,8 @@
       
 	% BIBTEX
     % Comment out this line if using biblatex
-    \usepackage{chicago} % AJS and ASR styles rely on chicago
+    %\usepackage{chicago} % AJS and ASR styles rely on chicago
+    
 
     % BIBLATEX
     % NOTE: Uncomment out these three lines to use biblatex
@@ -139,4 +142,20 @@
     %\usepackage{csquotes}
 	%\usepackage[style=authoryear,backend=biber]{biblatex}
 	%\bibliography{biblio}
-    
+    \usepackage{caption}
+	\captionsetup[figure]{labelfont=bf}
+     
+    % glossary
+	\usepackage{glossaries} 
+	\makeglossaries
+    \newglossaryentry{lgt}{name=LGT, description={Lateral gene transfer or horizontal gene transfer describes the movement of genetic material between organisms other than through vertical inheritance (parent to offspring)}}
+	\newglossaryentry{OGT}{name=OGT, description={Optimal growth temperature is the optimal temperature at which an organism will grow}}
+	\newglossaryentry{compositions}{name=composition, description={The composition of a proteome or genome describes the overall proportions of the 20 amino acids or five nucleotides within the sequence}}
+
+	\newglossaryentry{crown group}{name=crown group, description={Organisms within the crown group are the living representatives of a group and their recent ancestors back to the most recent shared common ancestor}}
+	\newglossaryentry{ribosomes}{name=ribosomes, description={The ribosome is an organelle responsible for protein manufacture by decoding the instructions in genomic material }}
+	\newglossaryentry{proteome}{name=proteome, description={A proteome is the entire set of proteins expressed by an organism or genome}}
+    \newglossaryentry{LUCA}{name=LUCA, description={The last universal common ancestor}}
+    \newglossaryentry{LBCA}{name=LBCA, description={The last bacterial common ancestor}}
+    \newglossaryentry{LACA}{name=LACA, description={The last archaeal common ancestor}}
+ 
